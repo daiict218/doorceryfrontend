@@ -1,0 +1,76 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$snack-bar-min-height: 7.2rem;
+$snack-bar-background-color: $white;
+$snack-bar-color: $nickel;
+$snack-bar-min-width: 34.4rem;
+$snack-bar-max-width: 43.2rem;
+$snack-bar-success-bg: $space;
+$snack-bar-error-bg: $error;
+$snack-bar-warning-bg: $gold;
+$snack-bar-border-radius: .4rem;
+$snack-bar-padding: 1.6rem;
+$icon-width: $snack-bar-min-height;
+$icon-min-height: $snack-bar-min-height;
+$snack-bar-close-icon-size: 1rem;
+$snack-bar-close-icon-color: $marble;
+$snack-bar-sub-padding: .8rem;
+$line-height: 1.5rem;
+
+.snackbar {
+  min-height: $snack-bar-min-height;
+  max-width: $snack-bar-max-width;
+  min-width: $snack-bar-min-width;
+  background-color: $snack-bar-background-color;
+  box-shadow: 0 1px 24px 0 $box-shadow-dark-color;
+  @include flex-container();
+  &.snackbarRounded {
+    border-radius: $snack-bar-border-radius;
+  }
+}
+
+.innerContainer {
+  color: $snack-bar-color;
+  padding: $snack-bar-padding;
+  line-height: $line-height;
+  margin-left: $icon-width;
+  overflow: hidden;
+  @include flex-item(1);
+  @include flex-container($align-items: center);
+}
+
+.success {
+  background-color: $snack-bar-success-bg;
+}
+
+.error {
+  background-color: $snack-bar-error-bg;
+}
+
+.warning {
+  background-color: $snack-bar-warning-bg;
+}
+
+.textBox {
+  margin-right: $snack-bar-sub-padding;
+  @include txt-bd3;
+  @include flex-item(1);
+}
+
+.icon {
+  padding: $snack-bar-sub-padding;
+  width: $icon-width;
+  @include full-height;
+  @include dpa;
+  &.iconRounded {
+    border-top-left-radius: $snack-bar-border-radius;
+    border-bottom-left-radius: $snack-bar-border-radius;
+  }
+}
+
+.close {
+  fill: $snack-bar-close-icon-color;
+  align-self: flex-start;
+  @include size($snack-bar-close-icon-size);
+}

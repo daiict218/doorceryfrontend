@@ -1,0 +1,36 @@
+@import "../../../../../../src/app/styles/variables.scss";
+@import "../../../../../../src/app/styles/mixins.scss";
+
+.wrapper {
+  align-items: center;
+  background-color: $snow;
+  border-radius: 0.5rem;
+  border: none;
+  color: $black;
+  display: inline-flex;
+  font-size: $font-size-small;
+  margin: .2rem;
+  max-width: 100%;
+  min-width: 4rem;
+}
+
+.removeIcon {
+  border-right: none;
+  color: $pepper;
+  cursor: pointer;
+  float: right;
+  height: 2rem;
+  line-height: .4rem;
+  padding: 0 .9rem 0 .5rem;
+  vertical-align: middle;
+  width: 2rem;
+}
+
+.label {
+  @include text-overflow();
+  color: $nickel;
+  font-size: $font-size-small;
+  line-height: 2.7rem;
+  max-width: 10.7rem;
+  padding-left: 1.5rem;
+}

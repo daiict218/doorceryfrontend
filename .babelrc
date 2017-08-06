@@ -1,0 +1,6 @@
+{
+  "presets": [["es2015", { "modules": false }], "node5", "stage-0", "react"],
+  "plugins": [
+        'transform-runtime', 'transform-decorators-legacy', "transform-react-display-name", "add-module-exports"
+  ]
+}

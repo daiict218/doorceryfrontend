@@ -1,0 +1,166 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "sort-class-members"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "__DEV__": true,
+    "__SERVER__": true,
+    "__": true,
+    "define": true,
+    "require": true
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "binaryLiterals": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "forOf": true,
+    "generators": true,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "octalLiterals": true,
+    "regexUFlag": true,
+    "regexYFlag": true,
+    "spread": true,
+    "superInFunctions": true,
+    "templateStrings": true,
+    "unicodeCodePointEscapes": true,
+    "globalReturn": true,
+    "jsx": true
+  },
+  "rules": {
+    // Strict mode
+    "strict": [
+      2,
+      "never"
+    ],
+    // Code style
+    "quotes": [
+      2,
+      "single"
+    ],
+    // Key Spacing
+    "key-spacing": 0,
+    //Best practices
+    "block-scoped-var": 1,
+    "dot-notation": 1,
+    "no-else-return": 1,
+    "no-eval": 1,
+    "no-extend-native": 1,
+    "no-extra-bind": 1,
+    "no-lone-blocks": 1,
+    "no-loop-func": 1,
+    "no-multi-spaces": 0,
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "vars-on-top": 1,
+    "max-statements": [
+      1,
+      20
+    ],
+    "no-underscore-dangle": 0,
+    "no-undef": 1,
+    "no-unused-vars": 1,
+    "indent": [
+      1,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    //React specific rules
+    "sort-class-members/sort-class-members": [
+      2,
+      {
+        "order": [
+          "[static-properties]",
+          "[static-methods]",
+          "[lifecycle]",
+          "[everything-else]",
+          "[event-handlers]",
+          "/^render.+$/",
+          "render"
+        ],
+        "groups": {
+          "event-handlers": [
+            {
+              "name": "/^on.*$/",
+              "type": "method"
+            },
+            {
+              "name": "/^handle.*$/",
+              "type": "method"
+            }
+          ],
+          "lifecycle": [
+            "displayName",
+            "propTypes",
+            "contextTypes",
+            "childContextTypes",
+            "mixins",
+            "statics",
+            "defaultProps",
+            "constructor",
+            "getDefaultProps",
+            "getInitialState",
+            "state",
+            "getChildContext",
+            "componentWillMount",
+            "componentDidMount",
+            "componentWillReceiveProps",
+            "shouldComponentUpdate",
+            "componentWillUpdate",
+            "componentDidUpdate",
+            "componentWillUnmount"
+          ]
+        }
+      }
+    ],
+    //Overwriting airbnb stylings
+    "array-bracket-spacing": 0,
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "func-names": 0,
+    "jsx-quotes": [
+      2,
+      "prefer-double"
+    ],
+    "max-len": [
+      2,
+      200,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false
+      }
+    ],
+    "no-console": 0,
+    "one-var": 0,
+    "prefer-const": 1,
+    "react/jsx-no-bind": 1,
+    "space-in-parens": 0,
+    "spaced-comment": 0,
+    //Keeping below till idea supports these codestyles
+    "object-curly-spacing": 0
+  }
+}

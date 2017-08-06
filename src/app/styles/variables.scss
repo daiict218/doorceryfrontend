@@ -1,0 +1,366 @@
+$spacer: 0.8rem;
+
+/*  ========================================================================
+    Variables
+    ========================================================================  */
+
+/*  Primary Colors
+    ========================================================================  */
+$space: #40a3f5 !default;
+$black: #000 !default;
+$obsidian: #0a0a14 !default;
+$basalt: #14141c !default;
+$tungsten: #191923 !default;
+$pencil: #23232d !default;
+$pepper: #373741 !default;
+$nickel: #4b4b55 !default;
+$granite: #5f5f6b !default;
+$concrete: #82828c !default;
+$soapstone: #9b9ba5 !default;
+$marble: #afafb9 !default;
+$chrome: #d2d2d9 !default;
+$smoke: #dcdce3 !default;
+$chalk: #e6e6ed !default;
+$salt: #ebebf0 !default;
+$ivory: #f0f0f5 !default;
+$snow: #f5f5fa !default;
+$pearl: #fafafd !default;
+$white: #ffffff !default;
+
+/*  Supporting Colors
+    ========================================================================  */
+$sea: #0c7edd !default;
+$sky: #138ef3 !default;
+$ice: #f6fbff !default;
+$ocean: #e3ecf1 !default;
+$orchid: #6464dc !default;
+$ocean: #005fc8 !default;
+$icon: #3c3c78 !default;
+$overlay: #0f0f17 !default;
+$launchpad: #121223 !default;
+$error: #ff6060 !default;
+$green: #20b796 !default;
+$gold: #ff9421 !default;
+$sun: #ffd200 !default;
+$admin-header: #cc0066 !default;
+$admin-button: #8A2BE2 !default;
+
+/*  Font Sizes
+    ========================================================================  */
+$font-size-xxxsmall: 0.8rem !default;
+$font-size-xxsmall: 0.9rem !default;
+$font-size-xsmall: 1rem !default;
+$font-size-small: 1.1rem !default;
+$font-size-normal: 1.2rem !default;
+$font-size-medium: 1.3rem !default;
+$font-size-xmedium: 1.4rem !default;
+$font-size-xxmedium: 1.6rem !default;
+$font-size-large: 1.8rem !default;
+$font-size-xlarge: 2rem !default;
+$font-size-xxlarge: 2.2rem !default;
+$font-size-xxxlarge: 2.4rem !default;
+$font-size-big: 2.6rem !default;
+$font-size-huge: 4.8rem !default;
+
+/*  Icon Sizes
+    ========================================================================  */
+$icon-size-xxsmall: 0.8rem !default;
+$icon-size-xsmall: 1rem !default;
+$icon-size-small: 1.2rem !default;
+$icon-size-base: 1.4rem !default;
+$icon-size-large: 1.6rem !default;
+$icon-size-x2large: 2rem !default;
+$icon-size-x4large: 3rem !default;
+
+/*  Buttons
+    ========================================================================  */
+$btn-height: 3.2rem !default;
+$btn-height-sm: 2.8rem !default;
+$btn-height-lg: 4rem !default;
+$btn-height-xs: 2.4rem !default;
+
+$btn-min-width: 9.6rem !default;
+$btn-min-width-sm: 8rem !default;
+$btn-min-width-xs: 7.2rem !default;
+$btn-min-width-lg: 11.2rem !default;
+
+/*  Forms
+    ========================================================================  */
+$input-padding-x-xs: .8rem !default;
+$input-padding-y-xs: .4rem !default;
+
+$input-height-xs: 2.4rem !default;
+
+/*  Background Colors
+    ========================================================================  */
+$bg-dark: $pencil !default;
+$bg-weak: $ivory !default;
+$bg-light: $white !default;
+
+/*  Layout
+    ========================================================================  */
+$header-height: 4rem !default;
+$content-padding: 2.4rem !default;
+$universal-bar-height: 4rem !default;
+$entity-bar-height: 4rem !default;
+$body-bg: $smoke !default;
+$link-color: $space !default;
+
+/*  Z - Index
+    ========================================================================  */
+$zindex-min: 10 !default;
+$zindex-mid: 100 !default;
+$zindex-max: 1000 !default;
+$zindex-x-max: 10000 !default;
+
+/*  Box Shadows
+    ========================================================================  */
+$box-shadow-light-color: transparentize($black, .8) !default;
+$box-shadow-weak-color: transparentize($black, .9) !default;
+$box-shadow-weaker-color: transparentize($black, .95) !default;
+$box-shadow-dark-color: rgba(10, 10, 20, 0.3) !default;
+
+$universal-bar-dialog-box-shadow: 0 2px 9px 0 $box-shadow-dark-color;
+
+/*  Transition Effects
+    ========================================================================  */
+$icon-scale-transition: cubic-bezier(.075, .82, .165, 1);
+
+/* Breakpoint
+    ========================================================================  */
+$breakpoints: (
+        xs: 0px, //Add one to actual breakpoint
+        sm: 426px,
+        md: 769px,
+        lg: 1025px,
+        xl: 1441px
+) !default;
+
+/*  ========================================================================
+    Bootstrap Config
+    ========================================================================  */
+
+$border-radius: .2rem !default;
+
+/*  Options
+    ========================================================================  */
+$enable-flex: true !default;
+$enable-transitions: true !default;
+
+/*  Spacing
+    ========================================================================  */
+$spacer: .8rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+        0: (
+                x: 0,
+                y: 0
+        ),
+        1: (
+                x: $spacer-x / 2,
+                y: $spacer-y / 2
+        ),
+        2: (
+                x: $spacer-x,
+                y: $spacer-y
+        ),
+        3: (
+                x: ($spacer-x * 1.5),
+                y: ($spacer-y * 1.5)
+        ),
+        4: (
+                x: ($spacer-x * 2),
+                y: ($spacer-y * 2)
+        ),
+        5: (
+                x: ($spacer-x * 3),
+                y: ($spacer-y * 3)
+        ),
+        6: (
+                x: ($spacer-x * 4),
+                y: ($spacer-y * 4)
+        )
+) !default;
+
+/*  Forms
+    ========================================================================  */
+$input-padding-x: $spacer-x * 1.5 !default;
+$input-padding-x-sm: $spacer-x !default;
+$input-padding-x-lg: $spacer-x * 2 !default;
+
+$input-padding-y: 1rem !default;
+$input-padding-y-sm: .8rem !default;
+$input-padding-y-lg: 1.4rem !default;
+
+$input-color: $nickel !default;
+$input-color-darkBg: $chrome !default;
+$input-color-weakBg: $nickel !default;
+
+$input-color-disabled: $chrome !default;
+$input-color-disabled-darkBg: $concrete !default;
+$input-color-disabled-weakBg: $marble !default;
+
+$input-border-radius: 0.2rem !default;
+$input-border-radius-xs: $input-border-radius !default;
+$input-border-radius-sm: $input-border-radius !default;
+$input-border-radius-lg: $input-border-radius !default;
+
+$input-border-color: $smoke !default;
+$input-border-color-darkBg: $pepper !default;
+$input-border-color-weakBg: $smoke !default;
+
+$input-border-hover: $input-border-color !default;
+$input-border-hover-darkBg: $input-border-color-darkBg !default;
+$input-border-hover-weakBg: $input-border-color-weakBg !default;
+
+$input-border-focus: $space !default;
+$input-border-focus-darkBg: $sea !default;
+$input-border-focus-weakBg: $space !default;
+
+$input-border-disabled: $chrome !default;
+$input-border-disabled-darkBg: $pepper !default;
+$input-border-disabled-weakBg: $chrome !default;
+
+$input-color-placeholder: $chrome !default;
+$input-color-placeholder-darkBg: $granite !default;
+$input-color-placeholder-weakBg: $chrome !default;
+
+$input-color-placeholder-disabled: $chrome !default;
+$input-color-placeholder-disabled-darkBg: $nickel !default;
+$input-color-placeholder-disabled-weakBg: $chrome !default;
+
+$input-height: $spacer-x * 5 !default;
+$input-height-xs: $spacer-x * 3 !default;
+$input-height-sm: $spacer-x * 4 !default;
+$input-height-lg: $spacer-x * 6 !default;
+
+$input-line-height: 1.8rem !default;
+$input-line-height-xs: 1.5rem !default;
+$input-line-height-sm: 1.6rem !default;
+$input-line-height-lg: 2rem !default;
+
+$input-darkBg: $pepper !default;
+$input-weakBg: $white !default;
+$input-bg-disabled: $ivory !default;
+$input-bg-disabled-darkBg: $pencil !default;
+$input-bg-disabled-weakBg: $ivory !default;
+
+$input-box-shadow: none !default;
+
+$form-group-margin-bottom: 2.4rem !default;
+$form-group-margin-bottom-xs: 1.6rem !default;
+$form-group-margin-bottom-sm: 1.6rem !default;
+
+/*  Buttons
+    ========================================================================  */
+
+$btn-border-width: 0.1rem !default;
+
+//Primary Button
+$btn-primary-bg: $space !default;
+$btn-primary-border: $btn-primary-bg !default;
+$btn-primary-color: $white !default;
+$btn-primary-bg-darkBg: $btn-primary-bg !default;
+$btn-primary-border-darkBg: $btn-primary-bg-darkBg !default;
+$btn-primary-color-darkBg: $white !default;
+$btn-primary-bg-weakBg: $btn-primary-bg !default;
+$btn-primary-border-weakBg: $btn-primary-bg-weakBg !default;
+$btn-primary-color-weakBg: $white !default;
+
+$btn-primary-hover-bg: $sky !default;
+$btn-primary-hover-border: $btn-primary-hover-bg !default;
+$btn-primary-hover-color: $white !default;
+$btn-primary-hover-bg-darkBg: $btn-primary-hover-bg !default;
+$btn-primary-hover-border-darkBg: $btn-primary-hover-bg-darkBg !default;
+$btn-primary-hover-color-darkBg: $white !default;
+$btn-primary-hover-bg-weakBg: $btn-primary-hover-bg !default;
+$btn-primary-hover-border-weakBg: $btn-primary-hover-bg-weakBg !default;
+$btn-primary-hover-color-weakBg: $white !default;
+
+$btn-primary-active-bg: $sea !default;
+$btn-primary-active-border: $btn-primary-active-bg !default;
+$btn-primary-active-color: $white !default;
+$btn-primary-active-bg-darkBg: $btn-primary-active-bg !default;
+$btn-primary-active-border-darkBg: $btn-primary-active-bg-darkBg !default;
+$btn-primary-active-color-darkBg: $white !default;
+$btn-primary-active-bg-weakBg: $btn-primary-active-bg !default;
+$btn-primary-active-border-weakBg: $btn-primary-active-bg-weakBg !default;
+$btn-primary-active-color-weakBg: $white !default;
+
+$btn-primary-disable-bg: mix($space, $white, 55%) !default;
+$btn-primary-disable-border: opacify($space, .5) !default;
+$btn-primary-disable-color: $white !default;
+$btn-primary-disable-bg-darkBg: mix($tungsten, $space, 55%) !default;
+$btn-primary-disable-border-darkBg: $btn-primary-disable-border !default;
+$btn-primary-disable-color-darkBg: $concrete !default;
+$btn-primary-disable-bg-weakBg: $btn-primary-disable-bg !default;
+$btn-primary-disable-border-weakBg: $btn-primary-disable-border !default;
+$btn-primary-disable-color-weakBg: $white !default;
+
+//Secondary Button
+$btn-secondary-color: $soapstone !default;
+$btn-secondary-bg: transparent !default;
+$btn-secondary-border: $marble !default;
+$btn-secondary-color-darkBg: $marble !default;
+$btn-secondary-bg-darkBg: transparent !default;
+$btn-secondary-border-darkBg: $soapstone !default;
+$btn-secondary-color-weakBg: $soapstone !default;
+$btn-secondary-bg-weakBg: transparent !default;
+$btn-secondary-border-weakBg: $marble !default;
+
+$btn-secondary-hover-bg: $soapstone !default;
+$btn-secondary-hover-border: $soapstone !default;
+$btn-secondary-hover-color: $white !default;
+$btn-secondary-hover-bg-darkBg: $soapstone !default;
+$btn-secondary-hover-border-darkBg: $soapstone !default;
+$btn-secondary-hover-color-darkBg: $white !default;
+$btn-secondary-hover-bg-weakBg: $soapstone !default;
+$btn-secondary-hover-border-weakBg: $soapstone !default;
+$btn-secondary-hover-color-weakBg: $white !default;
+
+$btn-secondary-active-bg: $concrete !default;
+$btn-secondary-active-border: $concrete !default;
+$btn-secondary-active-color: $white !default;
+$btn-secondary-active-bg-darkBg: $concrete !default;
+$btn-secondary-active-border-darkBg: $concrete !default;
+$btn-secondary-active-color-darkBg: $white !default;
+$btn-secondary-active-bg-weakBg: $concrete !default;
+$btn-secondary-active-border-weakBg: $concrete !default;
+$btn-secondary-active-color-weakBg: $white !default;
+
+$btn-secondary-disable-bg: $snow !default;
+$btn-secondary-disable-border: $chrome !default;
+$btn-secondary-disable-color: $marble !default;
+$btn-secondary-disable-bg-darkBg: $pepper !default;
+$btn-secondary-disable-border-darkBg: $granite !default;
+$btn-secondary-disable-color-darkBg: $concrete !default;
+$btn-secondary-disable-bg-weakBg: $smoke !default;
+$btn-secondary-disable-border-weakBg: $marble !default;
+$btn-secondary-disable-color-weakBg: $marble !default;
+
+$btn-padding-y: .9rem !default;
+$btn-padding-y-xs: .55rem !default;
+$btn-padding-y-sm: .75rem !default;
+$btn-padding-y-lg: 1.3rem !default;
+
+$btn-padding-x: $spacer * 2 !default;
+$btn-padding-x-xs: $spacer * 1.5 !default;
+$btn-padding-x-sm: $btn-padding-x !default;
+$btn-padding-x-lg: $spacer * 3 !default;
+
+$btn-border-radius: $btn-height / 2 !default;
+$btn-border-radius-sm: $btn-height-sm / 2 !default;
+$btn-border-radius-lg: $btn-height-lg / 2 !default;
+$btn-border-radius-xs: $btn-height-xs / 2 !default;
+
+//Grids
+$grid-gutter-width: $spacer*2;
+
+//Fonts
+$font-family-base-primary: 'OpenSansRegular', 'NotoSansRegular', Helvetica, Arial, sans-serif !default;
+$font-family-base-fallback: 'NotoSansRegular', Helvetica, Arial, sans-serif !default;
+$font-family-base: $font-family-base-fallback !default;
+
+$font-regular-fallback: 'NotoSansRegular' !default;
+$font-regular: $font-regular-fallback !default;

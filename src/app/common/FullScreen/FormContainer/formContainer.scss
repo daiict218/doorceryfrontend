@@ -1,0 +1,103 @@
+@import "../../../styles/variables.scss";
+
+$full-page-form-footer-height: 6*$spacer;
+$close-icn-dimensions: $icon-size-large;
+$close-icn-label-font-size: $font-size-xsmall;
+$close-container-height: $close-icn-dimensions + $close-icn-label-font-size + $spacer/2; //$spacer/2 -> margin bottom of icon;
+$close-container-padding: 2*$spacer;
+$close-button-dimension: 8*$spacer;
+
+.formContainer {
+  background-color: $bg-light;
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  right: 0;
+  top: 0;
+  z-index: 2 * $zindex-max;
+  &.bgDark {
+    background-color: $bg-dark;
+  }
+}
+
+.formHeader {
+  height: $universal-bar-height;
+  line-height: $universal-bar-height;
+  padding: 0 $universal-bar-height;
+}
+
+.formBody {
+  height: calc(100% - #{$universal-bar-height + $full-page-form-footer-height + $close-container-height});
+  top: $close-container-height;
+}
+
+//No header case
+.withoutHeader {
+  .formBody {
+    height: calc(100% - #{$full-page-form-footer-height + $close-container-height});
+  }
+  .formHeader {
+    display: none;
+  }
+}
+
+//No footer case
+.withoutFooter {
+  .formBody {
+    height: calc(100% - #{$universal-bar-height + $close-container-height});
+  }
+  .formFooter {
+    display: none;
+  }
+}
+
+//No header, no footer, only body
+.withoutHeaderAndFooter {
+  .formBody {
+    height: calc(100% - #{$close-container-height});
+  }
+}
+
+.withoutHeaderAndCloseButton {
+  .formBody {
+    height: calc(100% - #{$full-page-form-footer-height});
+    top: 0;
+  }
+}
+
+.formFooter {
+  bottom: 0;
+  border-top: 1px solid $chalk;
+  height: $full-page-form-footer-height;
+  line-height: $full-page-form-footer-height;
+}
+
+.closeContainer {
+  color: $concrete;
+  fill: $concrete;
+  padding-top: 2.5*$spacer; //in order to look visually balanced
+  right: 2.5*$spacer;
+  top: $universal-bar-height - $close-container-padding;
+  z-index: $zindex-min; //in order to bring it on the body
+  @include size($close-button-dimension);
+
+  &:hover {
+    background-color: $snow;
+    color: $nickel;
+    fill: $nickel;
+  }
+}
+
+.closeIconCont {
+  margin-bottom: 3*$spacer/4;
+}
+
+.closeIcon {
+  display: block;
+  margin: 0 auto;
+  @include size($close-icn-dimensions);
+}
+
+.closeLabel {
+  line-height: $close-icn-label-font-size;
+}

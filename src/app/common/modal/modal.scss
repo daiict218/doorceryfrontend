@@ -1,0 +1,73 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+$left: 50%;
+$top: 50%;
+
+.modal {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1040;
+}
+
+.backdrop {
+  background-color: $black;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.content {
+  background-color: $white;
+  border-radius: 2px;
+  left: $left;
+  padding: 1.2rem 0;
+  position: absolute;
+  top: $top;
+  transform: translate(-#{$top}, -#{$left});
+  width: 80rem;
+}
+
+.header {
+  border-bottom: 2px solid $chalk;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.4rem 1.2rem 2.4rem;
+}
+
+.headerLabel {
+  color: $granite;
+  font-weight: 600;
+}
+
+.closeIcon {
+  @include size(1.2rem);
+
+  cursor: pointer;
+}
+
+.footer {
+  border-top: 2px solid $chalk;
+  padding: 1.2rem 2.4rem 0 2.4rem;
+}
+
+.footerActions {
+  float: right;
+}
+
+.button {
+  display: inline-block;
+  height: 3rem;
+}
+
+.cancelBtn {
+  @extend .button;
+
+  margin-right: 1.5rem;
+}

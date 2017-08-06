@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.header {
+  background-color: $admin-header;
+  color: $white;
+  font-size: $font-size-xxxlarge;
+  font-weight: bold;
+  height: 9*$spacer;
+  line-height: 9*$spacer;
+  text-align: center;
+}
+
+.modal {
+  max-width: 40rem;
+}

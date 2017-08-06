@@ -1,0 +1,87 @@
+@mixin button() {
+  @include center-x-y;
+
+  cursor: pointer;
+  height: 4rem;
+  min-width: 10rem;
+  padding: 0 1.5rem;
+  text-transform: capitalize;
+
+  &:active {
+    &:focus {
+      outline: none;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin center-x {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin center-y {
+  align-items: center;
+  display: flex;
+}
+
+@mixin center-x-y {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin size($size) {
+  height: $size;
+  widows: $size;
+}
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin flex-container($flow: row nowrap, $justify: flex-start, $align-items: stretch, $align-content: stretch) {
+  align-content: $align-content;
+  align-items: $align-items;
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+}
+
+@mixin flex-item($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+@mixin txt-bd3 {
+  font-size: $font-size-normal;
+  @include font-fn-regular();
+}
+
+@mixin font-fn-regular {
+  font-family: $font-regular, Helvetica, Arial, sans-serif;
+}
+
+@mixin full-height {
+  height: 100%;
+}
+
+@mixin dpa {
+  position: absolute !important;
+}
+
+@mixin dpr {
+  position: relative !important;
+}
